@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - RailEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">RailEase</a></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="user_dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="search_trains.html">Book Tickets</a></li>
+                <li><a href="booking_history.html">Booking History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="user-dashboard">
+        <div class="container">
+            <h1>Welcome to Your Dashboard</h1>
+            
+            <div class="user-stats">
+                <div class="stat-card">
+                    <h3>Total Bookings</h3>
+                    <p id="totalBookings">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Upcoming Journeys</h3>
+                    <p id="upcomingJourneys">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Payments</h3>
+                    <p id="pendingPayments">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Loyalty Points</h3>
+                    <p id="loyaltyPoints">0</p>
+                </div>
+            </div>
+
+            <div class="dashboard-sections">
+                <div class="section">
+                    <h2>Quick Actions</h2>
+                    <div class="action-grid">
+                        <a href="search_trains.html" class="action-card">
+                            <h3>Book Tickets</h3>
+                            <p>Search and book train tickets</p>
+                        </a>
+                        <a href="booking_history.html" class="action-card">
+                            <h3>Booking History</h3>
+                            <p>View your past and upcoming bookings</p>
+                        </a>
+                        <a href="pnr_status.html" class="action-card">
+                            <h3>Check PNR Status</h3>
+                            <p>Check current status of your bookings</p>
+                        </a>
+                        <a href="profile.html" class="action-card">
+                            <h3>Update Profile</h3>
+                            <p>Manage your personal information</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Upcoming Journeys</h2>
+                    <div id="upcomingBookings" class="bookings-list">
+                        <!-- Upcoming bookings will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="train_schedule.html">Train Schedule</a></li>
+                    <li><a href="seat_availability.html">Seat Availability</a></li>
+                    <li><a href="pnr_status.html">PNR Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: support@railease.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RailEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

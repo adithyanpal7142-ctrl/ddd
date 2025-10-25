@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History - RailEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">RailEase</a></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="user_dashboard.html">Dashboard</a></li>
+                <li><a href="search_trains.html">Book Tickets</a></li>
+                <li><a href="booking_history.html" class="active">Booking History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="booking-history">
+        <div class="container">
+            <h1>Booking History</h1>
+            
+            <div class="filters">
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="confirmed">Confirmed</option>
+                    <option value="cancelled">Cancelled</option>
+                    <option value="waiting">Waiting</option>
+                </select>
+                <input type="date" id="dateFilter">
+                <button class="btn-primary" onclick="applyFilters()">Apply Filters</button>
+            </div>
+
+            <div id="bookingsList" class="bookings-list">
+                <!-- Bookings will be populated here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="train_schedule.html">Train Schedule</a></li>
+                    <li><a href="seat_availability.html">Seat Availability</a></li>
+                    <li><a href="pnr_status.html">PNR Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: support@railease.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RailEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

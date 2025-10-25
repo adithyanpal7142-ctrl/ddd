@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - RailEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">RailEase</a></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="user_dashboard.html">Dashboard</a></li>
+                <li><a href="search_trains.html">Book Tickets</a></li>
+                <li><a href="booking_history.html">Booking History</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile-section">
+        <div class="container">
+            <h1>My Profile</h1>
+            
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-picture">
+                        <img src="images/user-avatar.png" alt="Profile Picture">
+                        <button class="btn-secondary">Change Photo</button>
+                    </div>
+                    <nav class="profile-nav">
+                        <a href="#personal" class="nav-item active">Personal Info</a>
+                        <a href="#security" class="nav-item">Security</a>
+                        <a href="#preferences" class="nav-item">Preferences</a>
+                    </nav>
+                </div>
+                
+                <div class="profile-content">
+                    <div id="personal" class="profile-tab active">
+                        <h2>Personal Information</h2>
+                        <form id="personalInfoForm">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                    
+                    <div id="security" class="profile-tab">
+                        <h2>Security Settings</h2>
+                        <form id="changePasswordForm">
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" name="currentPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" name="newPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Change Password</button>
+                        </form>
+                    </div>
+                    
+                    <div id="preferences" class="profile-tab">
+                        <h2>Travel Preferences</h2>
+                        <form id="preferencesForm">
+                            <div class="form-group">
+                                <label for="preferredClass">Preferred Class</label>
+                                <select id="preferredClass" name="preferredClass">
+                                    <option value="sleeper">Sleeper</option>
+                                    <option value="third_ac">Third AC</option>
+                                    <option value="second_ac">Second AC</option>
+                                    <option value="first_ac">First AC</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredSeat">Preferred Seat</label>
+                                <select id="preferredSeat" name="preferredSeat">
+                                    <option value="lower">Lower Berth</option>
+                                    <option value="middle">Middle Berth</option>
+                                    <option value="upper">Upper Berth</option>
+                                    <option value="side_lower">Side Lower</option>
+                                    <option value="side_upper">Side Upper</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="newsletter"> Subscribe to newsletter
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-primary">Save Preferences</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="train_schedule.html">Train Schedule</a></li>
+                    <li><a href="seat_availability.html">Seat Availability</a></li>
+                    <li><a href="pnr_status.html">PNR Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: support@railease.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RailEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

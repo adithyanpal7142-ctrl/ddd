@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Availability - RailEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">RailEase</a></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="train_schedule.html">Train Schedule</a></li>
+                <li><a href="search_trains.html">Search Trains</a></li>
+                <li><a href="seat_availability.html" class="active">Seat Availability</a></li>
+                <li><a href="pnr_status.html">PNR Status</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="seat-availability">
+        <div class="container">
+            <h1>Check Seat Availability</h1>
+            
+            <div class="availability-form">
+                <form id="availabilityForm">
+                    <div class="form-group">
+                        <label for="trainNumber">Train Number</label>
+                        <input type="text" id="trainNumber" name="trainNumber" placeholder="Enter train number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fromStation">From Station</label>
+                        <select id="fromStation" name="fromStation" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="toStation">To Station</label>
+                        <select id="toStation" name="toStation" required>
+                            <option value="">Select Station</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="journeyDate">Journey Date</label>
+                        <input type="date" id="journeyDate" name="journeyDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainClass">Class</label>
+                        <select id="trainClass" name="trainClass" required>
+                            <option value="">Select Class</option>
+                            <option value="first_ac">First AC</option>
+                            <option value="second_ac">Second AC</option>
+                            <option value="third_ac">Third AC</option>
+                            <option value="sleeper">Sleeper</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Check Availability</button>
+                </form>
+            </div>
+
+            <div id="availabilityResult" class="availability-result" style="display: none;">
+                <h2>Seat Availability</h2>
+                <div class="availability-details">
+                    <div class="train-info">
+                        <h3 id="availTrainName"></h3>
+                        <p id="availTrainRoute"></p>
+                    </div>
+                    <div class="seat-status">
+                        <div class="status-item">
+                            <span class="label">Available Seats:</span>
+                            <span id="availSeats" class="value available"></span>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Waiting List:</span>
+                            <span id="waitingList" class="value waiting"></span>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Current Status:</span>
+                            <span id="currentStatus" class="status confirmed"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="train_schedule.html">Train Schedule</a></li>
+                    <li><a href="seat_availability.html">Seat Availability</a></li>
+                    <li><a href="pnr_status.html">PNR Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: support@railease.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RailEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

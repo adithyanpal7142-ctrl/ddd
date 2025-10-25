@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNR Status - RailEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><a href="index.html">RailEase</a></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="train_schedule.html">Train Schedule</a></li>
+                <li><a href="search_trains.html">Search Trains</a></li>
+                <li><a href="pnr_status.html" class="active">PNR Status</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="pnr-status">
+        <div class="container">
+            <h1>Check PNR Status</h1>
+            <div class="pnr-form">
+                <form id="pnrForm">
+                    <div class="form-group">
+                        <label for="pnrNumber">Enter PNR Number</label>
+                        <input type="text" id="pnrNumber" name="pnrNumber" 
+                               placeholder="Enter 10-digit PNR" required 
+                               pattern="[A-Za-z0-9]{10}" maxlength="10">
+                    </div>
+                    <button type="submit" class="btn-primary">Check Status</button>
+                </form>
+            </div>
+
+            <div id="pnrResult" class="pnr-result" style="display: none;">
+                <h2>Booking Details</h2>
+                <div class="booking-info">
+                    <div class="info-row">
+                        <span class="label">PNR Number:</span>
+                        <span id="resultPnr" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Train Name/Number:</span>
+                        <span id="resultTrain" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">From Station:</span>
+                        <span id="resultFrom" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">To Station:</span>
+                        <span id="resultTo" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Journey Date:</span>
+                        <span id="resultDate" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Departure Time:</span>
+                        <span id="resultDeparture" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Arrival Time:</span>
+                        <span id="resultArrival" class="value"></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Booking Status:</span>
+                        <span id="resultStatus" class="status confirmed"></span>
+                    </div>
+                </div>
+
+                <div class="passenger-details">
+                    <h3>Passenger Details</h3>
+                    <table id="passengerTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Seat</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Passenger data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - RailEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>RailEase Admin</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="admin_dashboard.html">Dashboard</a></li>
+                <li><a href="admin_trains.html">Manage Trains</a></li>
+                <li><a href="admin_users.html">Manage Users</a></li>
+                <li><a href="admin_bookings.html">Bookings</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Trains</h3>
+                    <p id="totalTrains">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Today's Bookings</h3>
+                    <p id="todayBookings">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Revenue</h3>
+                    <p id="revenue">$0</p>
+                </div>
+            </div>
+
+            <div class="admin-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-grid">
+                    <a href="admin_add_train.html" class="action-card">
+                        <h3>Add New Train</h3>
+                        <p>Add a new train to the system</p>
+                    </a>
+                    <a href="admin_trains.html" class="action-card">
+                        <h3>Manage Trains</h3>
+                        <p>View and edit train details</p>
+                    </a>
+                    <a href="admin_users.html" class="action-card">
+                        <h3>Manage Users</h3>
+                        <p>View and manage user accounts</p>
+                    </a>
+                    <a href="admin_reports.html" class="action-card">
+                        <h3>View Reports</h3>
+                        <p>Generate system reports</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
